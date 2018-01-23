@@ -1,0 +1,5 @@
+node_modules/
+coming_soon/
+dist/
+
+package-lock.json

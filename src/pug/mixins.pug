@@ -1,0 +1,116 @@
+//- VARS
+- var imgFolder = '../images/'
+
+mixin header(menu_open)
+	header.header.page__header
+		.wrapper.page__wrapper
+			.logo.header__logo
+				a.link(href="index.html")
+					.logo__pic
+					.logo__text
+						.logo__text--title
+							svg.icon.icon--active.icon--logo-text
+								use(xlink:href="../images/sprite.svg#logo-text")
+						.logo__text--subtitle
+							| Здоровое и диетическое питание
+			.header__search
+				.input__wrapper.input--rounded
+					input.input(type="text", placeholder="Поиск")
+					button.btn.btn--clr.icon__wrapper
+						svg.icon.icon--active.icon--search
+							use(xlink:href="../images/sprite.svg#search")
+			.info.header__info
+				a.link.info__phone(href="tel:+74959897431")
+					| +7 495 989-7431
+				a.link.info__email(href="mailto:sale@avilor.ru")
+					| sale@avilor.ru
+			.header__menu-btn
+				button.btn.btn--clr
+					svg.icon.icon--menu-toggle
+						use(xlink:href="../images/sprite.svg#menu-toggle")
+		nav.header__nav
+			.wrapper.page__wrapper
+				.menu.header__menu.scroll--cutt
+					.menu__wrapper
+						.header__menu-btn
+							button.btn.btn--clr
+								svg.icon.icon--menu-toggle
+									use(xlink:href="../images/sprite.svg#menu-toggle")
+					ul.list.header__menu-list
+						li.list__item
+							.nav__item
+								a.link(href="about.html")
+									| О компании
+						li.list__item.item--expanded(class=menu_open === true ? "item--active-trail" : "")
+							.nav__item
+								//-category.html
+								a.link(href="#")
+									| Каталог
+								button.btn.btn--clr
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down")
+							ul.list
+								li.list__item
+									.nav__item
+										a.link(href="lollipops.html")
+											| Леденцы
+								li.list__item
+									.nav__item
+										a.link(href="gums.html")
+											| Жвачка
+								li.list__item
+									.nav__item
+										a.link(href="bars.html")
+											| Батончики
+								li.list__item
+									.nav__item
+										a.link(href="stm.html")
+											| СТМ
+						li.list__item
+							.nav__item
+								a.link(href="inner.html")
+									| Партнеры
+						li.list__item
+							.nav__item
+								a.link(href="inner.html")
+									| Оптовикам
+						li.list__item
+							.nav__item
+								a.link(href="about.html")
+									| Контакты
+					.menu__wrapper
+						.info.header__info.header__nav-info
+							a.link.info__phone(href="tel:+74959897431")
+								| +7 495 989-7431
+							a.link.info__email(href="mailto:sale@avilor.ru")
+								| sale@avilor.ru
+							.info__adress
+								span
+									| Московская область,  
+								span
+									| город Королёв, 
+								span
+									| улица Калининградская, 12
+
+mixin picture(opts)
+	- var name = path.parse(opts.src).name
+	- var ext = path.parse(opts.src).ext.substr(1)
+	- var srcFile = path.resolve('src','images',opts.src)
+	- var alt = opts.alt ? opts.alt : name;
+	- var className = opts.class;
+	- var data = opts.data ? opts.data : '';
+	- function setQuality(quality){ images( srcFile, quality ); }
+	if opts.quality
+		#{setQuality(opts.quality)}
+	if config.images.sizes.length > 0 || images.webp
+		picture
+			each size in config.images.sizes
+				if config.images.webp
+					source(srcset=`${imgFolder}${name}-${size}.webp` type="image/webp" media=`(max-width: ${size}px)`)
+				source(srcset=`${imgFolder}${name}-${size}.${ext}` type=`image/${ext}` media=`(max-width: ${size}px)`)
+			if config.images.webp
+				source(srcset=`${imgFolder}${name}.webp` type="image/webp" )
+			source(srcset=`${imgFolder}${name}.${ext}` type=`image/${ext}`)
+			img(src=`${imgFolder}${name}.${ext}` class=className alt=alt )&attributes(data)
+	else
+		img(src=`${imgFolder}${name}.${ext}` class=className alt=alt )&attributes(data)
