@@ -1,5 +1,10 @@
 
 .blog__content{
-
+	@media (--medium-viewport){
+		
+	}
+	@media (--large-viewport){
+		flex-grow: 1;
+	}
 }
 

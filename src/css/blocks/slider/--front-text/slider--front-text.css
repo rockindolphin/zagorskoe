@@ -50,10 +50,12 @@
 		& .slide__content{
 			margin-bottom: initial;
 		}							
-		& .swiper-pagination,
+		& .swiper-pagination{
+			display: block;
+		}
 		& .swiper-button-prev,
 		& .swiper-button-next{
-			display: block;
+			display: flex;
 		}	
 		& .swiper-slide{
 			align-items: center;

@@ -4,6 +4,7 @@
 	--page-gap: 15px; 
 	--scrollbar-width:  0px;
 	--anim-dur:  0.4s;
+	--box-rad:  6px;
 
 	/*Colors*/
 	--black: #000000;
@@ -99,6 +100,7 @@ body{
 	padding: 0;
 	font-family: Montserrat, sans-serif;
 	font-size: 16px;
+	color: var(--gray_333);
 	font-weight: var(--fw-normal);
 }
 
@@ -154,7 +156,19 @@ h4{
 }
 h5{
 	font-size: 18px;
+	@media (--medium-viewport){
+		font-size: 20px;
+	}
+	@media (--large-viewport){
+		font-size: 22px;
+	}	
 }
 h6{
 	font-size: 14px;
+	@media (--medium-viewport){
+		font-size: 18px;
+	}
+	@media (--large-viewport){
+		font-size: 18px;
+	}	
 }

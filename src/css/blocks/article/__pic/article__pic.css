@@ -1,0 +1,10 @@
+
+.article__pic{
+	border-radius: calc(var(--box-rad)/2);
+	overflow:  hidden;
+	margin-bottom: 18px;
+	& .img{
+		display: block;
+	}
+}
+

@@ -1,0 +1,9 @@
+
+.article__title{
+	font-size: 14px;
+	display: inline-block;
+	margin-bottom: 10px;
+	text-decoration: underline;
+	line-height: 1.6;
+}
+

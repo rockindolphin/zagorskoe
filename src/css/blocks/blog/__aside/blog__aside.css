@@ -1,5 +1,12 @@
 
 .blog__aside{
-
+	@media (--medium-viewport){
+		
+	}
+	@media (--large-viewport){
+		flex-grow: 1;
+		width: 100%;
+		max-width: 320px;
+	}
 }
 

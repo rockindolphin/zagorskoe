@@ -19,7 +19,7 @@ html(lang="ru")
 										.swiper-slide 
 											img.slider__img(src="../images/slide-1.jpg", alt="slide-3", data-bg="true")
 							.page__wrapper
-								.slider--front-text
+								.slider.slider--front-text
 									.swiper-container
 										.swiper-wrapper
 											.swiper-slide 
@@ -36,8 +36,12 @@ html(lang="ru")
 														| Экспериментальное хозяйство института — производственная база для проведения научных исследований, касающихся разведения птицы.
 										.swiper-pagination
 										.swiper-button-prev
+											svg.icon.icon--active.icon--arrow-left
+												use(xlink:href="../images/sprite.svg#arrow-left")
 										.swiper-button-next
-				.page__wrapper
+											svg.icon.icon--active.icon--arrow-right
+												use(xlink:href="../images/sprite.svg#arrow-right")
+				.page__wrapper(style="margin-bottom:500px;")
 					.blog
 						.blog__content
 							.input__wrapper--tabs
@@ -71,5 +75,34 @@ html(lang="ru")
 								.input__content(data-tab="3")
 									| content - 3
 						aside.blog__aside
-							| aside
+							.slider.slider--articles
+								h6.slider__title
+									| Что нового
+								.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											article.article
+												.article__pic
+													img.img(src="images/article-1.jpg", alt="pic")
+												.article__categories
+													span.article__category
+														| Научная деятельность
+												a.link.article__title( href="#")
+													| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
+												.article__date
+													| 12 декабря, 2017
+										.swiper-slide
+											article.article
+												| lorem
+										.swiper-slide
+											article.article
+												| lorem
+									.slider__controls
+										.swiper-button-prev
+											svg.icon.icon--active.icon--chewron-left
+												use(xlink:href="../images/sprite.svg#chewron-left")
+										.swiper-pagination
+										.swiper-button-next
+											svg.icon.icon--active.icon--chewron-right
+												use(xlink:href="../images/sprite.svg#chewron-right")
 			include partials/footer.pug
