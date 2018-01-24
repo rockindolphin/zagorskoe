@@ -1,0 +1,19 @@
+
+.page__wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--page-gap);
+	padding-right: var(--page-gap);
+	width: 100%;
+	max-width: calc( 1040px + var(--page-gap)*2 );
+	@media (--medium-viewport){
+
+	}
+
+	@media (--large-viewport) {
+
+	}
+}
+
+
+

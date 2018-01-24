@@ -8,6 +8,11 @@
 	/*Colors*/
 	--black: #000000;
 	--white: #ffffff;
+	--gray_333:  #333333;
+	--gray_555:  #555555;
+	--red_e30:  #e30413;
+
+	--grad-bg-top:  linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
 
 	/*Fonts*/
 	--fw-thin: 100;
@@ -30,15 +35,47 @@
 
 /* FONTS */
 
-
+/*
 @font-face {
-    font-family: Roboto;
-    src: 	'../fonts/Roboto/RobotoRegular.woff',
-    		'../fonts/Roboto/RobotoRegular.woff2';
+    font-family: Montserrat;
+    src: 	'../fonts/Montserrat/MontserratRegular.woff',
+    		'../fonts/Montserrat/MontserratRegular.woff2';
     font-style: normal;
     font-weight: var(--fw-normal);
 }
 
+@font-face {
+    font-family: Montserrat;
+    src: 	'../fonts/Montserrat/MontserratMedium.woff',
+    		'../fonts/Montserrat/MontserratMedium.woff2';
+    font-style: normal;
+    font-weight: var(--fw-medium);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: 	'../fonts/Montserrat/MontserratBold.woff',
+    		'../fonts/Montserrat/MontserratBold.woff2';
+    font-style: normal;
+    font-weight: var(--fw-bold);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: 	'../fonts/Montserrat/MontserratLight.woff',
+    		'../fonts/Montserrat/MontserratLight.woff2';
+    font-style: normal;
+    font-weight: var(--fw-light);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: 	'../fonts/Montserrat/MontserratSemibold.woff',
+    		'../fonts/Montserrat/MontserratSemibold.woff2';
+    font-style: normal;
+    font-weight: var(--fw-semibold);
+}
+*/
 
 /* OTHER */
 
@@ -47,10 +84,10 @@
 	max-width: 100%;
 	word-break: break-word;
 	&:matches(:active,:focus){
-		outline-color: var(--purple_af0);
+		
 	}
 	&:visited{
-		color: var(--purple_af0);
+		
 	}
 }
 
@@ -60,7 +97,7 @@ body{
 	min-height: 100%;
 	margin:  0;
 	padding: 0;
-	font-family: Roboto, Rubik, sans-serif;
+	font-family: Montserrat, sans-serif;
 	font-size: 16px;
 	font-weight: var(--fw-normal);
 }
@@ -76,8 +113,7 @@ img{
 }
 
 :--all-headers{
-	font-family: Rubik, Roboto, sans-serif;
-	font-weight: var(--fw-medium);
+	font-weight: var(--fw-semi-bold);
 }
 
 h1{

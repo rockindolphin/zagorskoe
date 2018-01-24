@@ -6,4 +6,70 @@ html(lang="ru")
 		.page__body
 			+header()
 			main.main.page__main
+				section.section.section--full-width
+					.section__content
+						.slider--front
+							.slider--front-pics
+								.swiper-container
+									.swiper-wrapper
+										.swiper-slide 
+											img.slider__img(src="../images/slide-1.jpg", alt="slide-1", data-bg="true")
+										.swiper-slide 
+											img.slider__img(src="../images/slide-2.jpg", alt="slide-2", data-bg="true")
+										.swiper-slide 
+											img.slider__img(src="../images/slide-1.jpg", alt="slide-3", data-bg="true")
+							.page__wrapper
+								.slider--front-text
+									.swiper-container
+										.swiper-wrapper
+											.swiper-slide 
+												.slide__content
+													h3
+														| Экспериментальное хозяйство института — производственная база для проведения научных исследований, касающихся разведения птицы. 
+											.swiper-slide 
+												.slide__content
+													h3
+														| Экспериментальное хозяйство института — производственная база для проведения научных исследований, касающихся разведения птицы.
+											.swiper-slide 
+												.slide__content
+													h3
+														| Экспериментальное хозяйство института — производственная база для проведения научных исследований, касающихся разведения птицы.
+										.swiper-pagination
+										.swiper-button-prev
+										.swiper-button-next
+				.page__wrapper
+					.blog
+						.blog__content
+							.input__wrapper--tabs
+								input.input(type="radio", name="tabs", id="tab-1" data-tab="1" checked)
+								label.input__label(for="tab-1")
+									span
+										| О хозяйстве
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down")
+								.input__content(data-tab="1")
+									h6
+										| Селекционная работа в хозяйстве началась с первых месяцев основания института – в 1930 г.  Из-за рубежа были завезены для размножения куры разных пород, и в 1953 году в стаде уже насчитывалось около 10 тысяч высокопродуктивных несушек. 
+									p
+										| Еще в довоенные годы хозяйство было постоянным участником ВСХВ и удостаивалось различных наград. В тяжелые для страны военные годы работники ЭПХ сумели сохранить резервный генофонд птицы, а в дальнейшем регулярно пополняли его. 
+									p
+										| Экспериментальная база института стала настоящим полигоном для проведения научно-исследовательских работ и апробации законченных разработок-способов содержания птицы, ее кормления, приемов и методов селекции.
+								input.input(type="radio", name="tabs", id="tab-2" data-tab="2")
+								label.input__label(for="tab-2")
+									span
+										| Документы
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down")
+								.input__content(data-tab="2")
+									| content - 2
+								input.input(type="radio", name="tabs", id="tab-3" data-tab="3")
+								label.input__label(for="tab-3")
+									span
+										| Награды
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down")
+								.input__content(data-tab="3")
+									| content - 3
+						aside.blog__aside
+							| aside
 			include partials/footer.pug

@@ -1,0 +1,114 @@
+
+.input__wrapper--tabs{
+	margin-left: calc(-1*var(--page-gap));
+	margin-right: calc(-1*var(--page-gap));
+	max-width: initial;
+	margin-bottom: 30px;
+	& .input{
+		display: none;
+		&:checked + .input__label{
+			color: var(--red_e30);
+			background-color: transparent;
+			& .icon{
+				transform: rotate(180deg);
+			}
+		}		
+	}
+	& .input__label{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: var(--page-gap);
+		padding-right: var(--page-gap);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		min-height: 40px;
+		font-weight: var(--fw-semi-bold);
+		cursor: pointer;
+		color: var(--gray_333);
+		border-radius: 2px;
+		border: 1px solid;
+		border-color: color(#000000 alpha(15%));
+		background-color: var(--white);
+		& + .input__label,
+		& + * + .input__label{
+			border-top-color: transparent;
+		}
+	}
+	& .input__content{
+		width: 100%;
+		color: var(--gray_555);
+		display: none;
+		padding-left: var(--page-gap);
+		padding-right: var(--page-gap);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 14px;
+		&>*:first-child{
+			margin-top: 0;
+		}
+	}
+	& .input__content--visible{
+		display: block;
+	}	
+	@media (--medium-viewport){
+		& .input{
+			&:checked + .input__label{
+				background-color: var(--white);
+				border-radius: 20px;
+				border: 1px solid;
+				border-color: color(#000000 alpha(15%));
+				&>span{
+					background: none;
+				}
+			}		
+		}		
+		& .input__label{
+			width: auto;
+			border-color: transparent;
+			background-color: transparent;		
+			&>span{
+				background: linear-gradient(to right, var(--black) 0%,var(--black) 50%,transparent 50%,transparent 100%);
+				background-size: 2px 1px;
+				background-position: left bottom;
+				background-repeat: repeat-x;
+			}
+			& .icon{
+				display: none;
+			}
+		}
+	}	
+	@media (--large-viewport){
+		margin-left: 0;
+		margin-right: 0;
+		& .input{
+			&:checked + .input__label{
+				background-color: transparent;
+				border-radius: 0;
+				border: none;
+				border-bottom: 3px solid;
+				border-color: var(--red_e30);
+			}		
+		}		
+		& .input__label{
+			padding-left: 0;
+			padding-right: 0;
+			border-bottom: 3px solid;
+			border-color: transparent;
+			margin-bottom: -1px;			
+			&:not(:last-child){
+				margin-right: 30px;
+			}
+			&>span{
+				background: none;
+			}
+		}
+		& .input__content{
+			padding-left: 0;
+			padding-right: 0;
+		}		
+	}	
+}
+

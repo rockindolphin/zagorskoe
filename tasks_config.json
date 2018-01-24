@@ -2,7 +2,7 @@
 	"images": {
 		"webp": false,
 		"generateSpriteSvg": true,
-		"generateSpritePng": true,
+		"generateSpritePng": false,
 		"sizes": []
 	}
 }

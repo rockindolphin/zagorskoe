@@ -1,0 +1,19 @@
+
+.page{ 
+	display: flex; /*fix бага ie11 с min-height:100%*/
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	position: relative;
+	z-index: 1;
+	background-image: url('../images/page_pattern.jpg');
+	background-position: left top;
+	background-repeat: repeat;
+	@media (--medium-viewport){
+					
+	}
+	@media (--large-viewport){
+		
+	}	
+}
+

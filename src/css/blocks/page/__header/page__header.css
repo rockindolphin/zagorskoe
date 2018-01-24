@@ -1,0 +1,15 @@
+
+.page__header{
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	border-bottom: 1px solid;
+	border-color: color( #000000 alpha(10%) );	
+	@media (--medium-viewport){
+							
+	}
+	@media (--large-viewport){
+						
+	}
+}
+
