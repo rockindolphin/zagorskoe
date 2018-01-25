@@ -1,0 +1,49 @@
+include ./mixins.pug
+doctype html
+html(lang="ru")
+	include partials/head.pug
+	body.page
+		.page__body
+			+header()
+			main.main.page__main
+				.page__wrapper
+					.breadcrumbs
+						a.breadcrumbs__item(href="#")
+							| Каталог
+						a.breadcrumbs__item(href="#")
+							| Коллекционный стада
+						a.breadcrumbs__item(href="#")
+							| Куры
+					h2.page__title
+						| Куры
+					.blog
+						.blog__content
+							.catalog
+								.catalog__items
+									a.catalog__item(href="#")
+										span.item__pic
+											img.img(src="../images/catalog-3-1.jpg", alt="catalog item" data-bg="true")
+										span.item__title
+											| Австралорп чёрный
+									a.catalog__item(href="#")
+										span.item__pic
+											img.img(src="../images/catalog-3-2.jpg", alt="catalog item" data-bg="true")
+										span.item__title
+											| Австралорп чёрно-пёстрый
+									a.catalog__item(href="#")
+										span.item__pic
+											img.img(src="../images/catalog-3-3.jpg", alt="catalog item" data-bg="true")
+										span.item__title
+											| Амрок
+									a.catalog__item(href="#")
+										span.item__pic
+											img.img(src="../images/catalog-3-4.jpg", alt="catalog item" data-bg="true")
+										span.item__title
+											| Андалузкая голубая
+									a.catalog__item(href="#")
+										span.item__pic
+											img.img(src="../images/catalog-3-5.jpg", alt="catalog item" data-bg="true")
+										span.item__title
+											| Королёк
+						aside.blog__aside
+			include partials/footer.pug

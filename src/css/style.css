@@ -1,19 +1,24 @@
 
 :root{
 	/*Variables*/
+	--wrapper-max: 1040px; 
 	--page-gap: 15px; 
 	--scrollbar-width:  0px;
 	--anim-dur:  0.4s;
 	--box-rad:  6px;
 	--aside-max-width:  320px;
+	--blog-gap:  40px;
+	--img-border-rad:  4px;
 
 	/*Colors*/
 	--black: #000000;
 	--white: #ffffff;
+	--gray_222:  #222222;
 	--gray_333:  #333333;
 	--gray_555:  #555555;
 	--gray_666:  #666666;
 	--red_e30:  #e30413;
+	--brown_ae9:  #ae9a77;
 
 	--grad-bg-top:  linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
 
@@ -31,12 +36,28 @@
 
 
 @custom-media --medium-viewport (width > 639px);
-@custom-media --large-viewport (width > 1023px);
+@custom-media --large-viewport (width > 1069px);
 
 @custom-selector :--all-headers h1, h2, h3, h4, h5, h6;
 @custom-selector :--table-cell td, th;
 
 /* FONTS */
+
+@font-face {
+    font-family: Roboto;
+    src: 	'../fonts/Roboto/RobotoRegular.woff',
+    		'../fonts/Roboto/RobotoRegular.woff2';
+    font-style: normal;
+    font-weight: var(--fw-normal);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: 	'../fonts/Roboto/RobotoBold.woff',
+    		'../fonts/Roboto/RobotoBold.woff2';
+    font-style: normal;
+    font-weight: var(--fw-bold);
+}
 
 /*
 @font-face {
@@ -104,6 +125,13 @@ body{
 	font-size: 16px;
 	color: var(--gray_333);
 	font-weight: var(--fw-normal);
+}
+
+a{
+	color: currentcolor;
+	&:not([class]):hover{
+		color: var(--red_e30);
+	}
 }
 
 img{

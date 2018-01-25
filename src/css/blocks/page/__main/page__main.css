@@ -2,5 +2,6 @@
 .page__main{
 	width: 100%;
 	flex-grow: 1;
+	padding-top: 30px;
 }
 

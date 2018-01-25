@@ -1,11 +1,14 @@
 
 .blog__content{
+	& .img{
+		border-radius: var(--img-border-rad);
+	}
 	@media (--medium-viewport){
 		
 	}
 	@media (--large-viewport){
 		flex-grow: 1;
-		margin-right: 60px;
+		margin-right: var(--blog-gap);
 	}
 }
 

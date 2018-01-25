@@ -1,6 +1,6 @@
 
 .article__pic{
-	border-radius: calc(var(--box-rad)/2);
+	border-radius: var(--img-border-rad);
 	overflow:  hidden;
 	margin-bottom: 18px;
 	background-position: center;
@@ -10,8 +10,6 @@
 		content: '';
 		display: inline-block;
 		padding-top: 55%;
-		width: 0;
-		float: left;
 	}
 	& .img{
 		display: block;

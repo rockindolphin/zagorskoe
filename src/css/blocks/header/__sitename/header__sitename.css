@@ -1,0 +1,12 @@
+
+.header__sitename{
+	font-family: Roboto, sans-serif;
+	font-size: 13px;
+	& strong{
+		display: block;
+		font-family: Montserrat, sans-serif;
+		font-weight: var(--fw-bold);
+		font-size: 24px;
+	}
+}
+
