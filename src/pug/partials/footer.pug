@@ -1,6 +1,25 @@
 footer.footer.page__footer
 	.wrapper.page__wrapper
-		| footer
+		.footer__content
+			.footer__logo
+				svg.icon.icon--active.icon--logo
+					use(xlink:href="../images/sprite.svg#logo")
+			.footer__about
+				p
+					| Селекционно-генетический центр «Загорское экспериментальное племенное хозяйство» – филиал Федерального государственного бюджетного научного центра «Всероссийский научно-исследовательский и технологический институт птицеводства» Российской академии наук
+				.footer__copy
+					p
+						| © 2017 СГЦ «Загорское ЭПХ»
+		.footer__aside
+			.footer__info
+				| ул. Маслиева, д. 44
+				br
+				| г. Сергиев Посад, 141311
+				br
+				| Московская область
+				br
+				| Россия
 script(src="../js/vendors/jquery-3.2.1.min.js")
 script(src="../js/vendors/swiper.min.js")
+script(src="../js/vendors/lightbox.min.js")
 script(src="../js/app.js")

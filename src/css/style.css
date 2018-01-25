@@ -5,12 +5,14 @@
 	--scrollbar-width:  0px;
 	--anim-dur:  0.4s;
 	--box-rad:  6px;
+	--aside-max-width:  320px;
 
 	/*Colors*/
 	--black: #000000;
 	--white: #ffffff;
 	--gray_333:  #333333;
 	--gray_555:  #555555;
+	--gray_666:  #666666;
 	--red_e30:  #e30413;
 
 	--grad-bg-top:  linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
@@ -171,4 +173,8 @@ h6{
 	@media (--large-viewport){
 		font-size: 18px;
 	}	
+}
+
+.lightbox .lb-image{
+	max-width: none;
 }

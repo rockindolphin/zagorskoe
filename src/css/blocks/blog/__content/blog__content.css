@@ -5,6 +5,7 @@
 	}
 	@media (--large-viewport){
 		flex-grow: 1;
+		margin-right: 60px;
 	}
 }
 

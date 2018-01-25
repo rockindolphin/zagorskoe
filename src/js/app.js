@@ -54,6 +54,7 @@
 
 		var articlesSlider = new Swiper('.slider--articles .swiper-container', {
 			slidesPerView: 1,
+			spaceBetween: 40,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -66,7 +67,15 @@
 				init: function(){
 					//console.log('ok');
 				} 
-			}
+			},
+			breakpoints: {
+				1024: {
+					slidesPerView: 2,
+				},
+				640: {
+					slidesPerView: 1,
+				},
+			}			
 		});		
 
 

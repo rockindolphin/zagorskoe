@@ -227,6 +227,7 @@ gulp.task('css', function(){
 		gulp.src([
 			path.resolve(cssPath, 'vendors', 'normalize.css'),
 			path.resolve(cssPath, 'vendors', 'swiper.css'),
+			path.resolve(cssPath, 'vendors', 'lightbox.css'),
 			path.resolve(cssPath, 'style.css'),
 			path.resolve(cssPath, 'blocks', '**', '*.css')
 		]),

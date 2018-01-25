@@ -1,7 +1,8 @@
 
 .blog{
+	margin-bottom: 40px;
 	@media (--medium-viewport){
-		
+		margin-bottom: 70px;	
 	}
 	@media (--large-viewport){
 		width: 100%;

@@ -18,5 +18,11 @@
 			height: 60px;
 		}	
 	}
+	@media (--medium-viewport){
+		margin-bottom: 10px;		
+	}
+	@media (--large-viewport){
+		margin-bottom: 25px;
+	}
 }
 

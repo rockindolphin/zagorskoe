@@ -41,7 +41,7 @@ html(lang="ru")
 										.swiper-button-next
 											svg.icon.icon--active.icon--arrow-right
 												use(xlink:href="../images/sprite.svg#arrow-right")
-				.page__wrapper(style="margin-bottom:500px;")
+				.page__wrapper
 					.blog
 						.blog__content
 							.input__wrapper--tabs
@@ -58,22 +58,40 @@ html(lang="ru")
 										| Еще в довоенные годы хозяйство было постоянным участником ВСХВ и удостаивалось различных наград. В тяжелые для страны военные годы работники ЭПХ сумели сохранить резервный генофонд птицы, а в дальнейшем регулярно пополняли его. 
 									p
 										| Экспериментальная база института стала настоящим полигоном для проведения научно-исследовательских работ и апробации законченных разработок-способов содержания птицы, ее кормления, приемов и методов селекции.
-								input.input(type="radio", name="tabs", id="tab-2" data-tab="2")
+								input.input(type="radio", name="tabs", id="tab-2" data-tab="2" )
 								label.input__label(for="tab-2")
 									span
 										| Документы
 									svg.icon.icon--active.icon--chewron-down
 										use(xlink:href="../images/sprite.svg#chewron-down")
 								.input__content(data-tab="2")
-									| content - 2
-								input.input(type="radio", name="tabs", id="tab-3" data-tab="3")
+									.gallery--docs
+										.gallery__items
+											.gallery__item
+												a.item__pic(href="../images/docs-1.png", data-lightbox="docs")
+													img.img(src="../images/docs-1.png", alt="")
+											.gallery__item
+												a.item__pic(href="../images/docs-2.png", data-lightbox="docs")
+													img.img(src="../images/docs-2.png", alt="")
+									p
+										| Свидетельства о регистрации в<br> государственном племенном регистре
+								input.input(type="radio", name="tabs", id="tab-3" data-tab="3" )
 								label.input__label(for="tab-3")
 									span
 										| Награды
 									svg.icon.icon--active.icon--chewron-down
 										use(xlink:href="../images/sprite.svg#chewron-down")
 								.input__content(data-tab="3")
-									| content - 3
+									p
+										| Предприятий неоднократно награжденено<br> почётными граммотами и наградами
+									.gallery--docs
+										.gallery__items
+											.gallery__item
+												a.item__pic(href="../images/diploms-1.png", data-lightbox="diploms")
+													img.img(src="../images/diploms-1.png", alt="")
+											.gallery__item
+												a.item__pic(href="../images/diploms-2.png", data-lightbox="diploms")
+													img.img(src="../images/diploms-2.png", alt="")
 						aside.blog__aside
 							.slider.slider--articles
 								h6.slider__title
@@ -83,7 +101,7 @@ html(lang="ru")
 										.swiper-slide
 											article.article
 												.article__pic
-													img.img(src="images/article-1.jpg", alt="pic")
+													img.img(src="images/article-1.jpg", alt="pic", data-bg="true")
 												.article__categories
 													span.article__category
 														| Научная деятельность
@@ -93,10 +111,37 @@ html(lang="ru")
 													| 12 декабря, 2017
 										.swiper-slide
 											article.article
-												| lorem
+												.article__pic
+													img.img(src="images/article-1.jpg", alt="pic", data-bg="true")
+												.article__categories
+													span.article__category
+														| Научная деятельность
+												a.link.article__title( href="#")
+													| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
+												.article__date
+													| 12 декабря, 2017
 										.swiper-slide
 											article.article
-												| lorem
+												.article__pic
+													img.img(src="images/article-1.jpg", alt="pic", data-bg="true")
+												.article__categories
+													span.article__category
+														| Научная деятельность
+												a.link.article__title( href="#")
+													| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
+												.article__date
+													| 12 декабря, 2017
+										.swiper-slide
+											article.article
+												.article__pic
+													img.img(src="images/article-1.jpg", alt="pic", data-bg="true")
+												.article__categories
+													span.article__category
+														| Научная деятельность
+												a.link.article__title( href="#")
+													| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
+												.article__date
+													| 12 декабря, 2017
 									.slider__controls
 										.swiper-button-prev
 											svg.icon.icon--active.icon--chewron-left

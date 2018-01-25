@@ -58,9 +58,11 @@
 		align-items: flex-start;
 		justify-content: center;
 		flex-wrap: wrap;
-		padding-top: 30px;
-		padding-left: var(--page-gap);
-		padding-right: var(--page-gap);		
+		padding-top: 20px;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;	
 		& .input{
 			&:checked + .input__label{
 				background-color: var(--white);
@@ -96,8 +98,6 @@
 		}		
 	}	
 	@media (--large-viewport){
-		margin-left: 0;
-		margin-right: 0;
 		justify-content: flex-start;
 		& .input{
 			&:checked + .input__label{

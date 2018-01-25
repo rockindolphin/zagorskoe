@@ -17,7 +17,7 @@
 		justify-content: space-between
 	}
 	& .article{
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	} 
 	& .swiper-pagination,
 	& .swiper-button-prev, 
@@ -28,6 +28,13 @@
 	& .swiper-button-prev, 
 	& .swiper-button-next{
 		transform: none;
+		& .icon{
+			width: 14px;
+			height: 24px;
+		}
+		&:hover{
+			color: var(--red_e30);
+		}
 	}
 	& .swiper-pagination-bullet{
 		margin-left: 5px;
