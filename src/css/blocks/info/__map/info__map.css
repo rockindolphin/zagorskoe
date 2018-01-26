@@ -1,0 +1,14 @@
+
+.info__map{
+	width: 100%;
+	margin-bottom: 30px;
+	& > * {
+		width: 100% !important;
+	}
+	@media (--medium-viewport){
+								
+	}
+	@media (--large-viewport){
+	}	
+}
+

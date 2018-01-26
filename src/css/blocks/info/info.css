@@ -1,5 +1,20 @@
 
 .info{
-
+	@media (--medium-viewport){
+		& .info__items{
+			&:first-child{
+				column-count: 2;
+				& .info__item{
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}	
+			}
+		}					
+	}
+	@media (--large-viewport){
+		column-count: 2;
+		column-gap: 40px;
+	}	
 }
 
