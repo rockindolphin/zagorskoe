@@ -1,0 +1,15 @@
+
+.news__items{
+	column-count: 1;
+	column-width: 100%;
+	@media (--medium-viewport){
+		column-gap: 30px;
+		column-count: 2;
+		column-width: calc( (100%-30px)/2 );							
+	}
+	@media (--large-viewport){
+		column-count: 3;
+		column-width: calc( (100%-2*30px)/3 );		
+	}	
+}
+

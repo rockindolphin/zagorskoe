@@ -1,5 +1,6 @@
 
 .article{
-
+	break-inside: avoid-column;
+	margin-bottom: 40px;
 }
 

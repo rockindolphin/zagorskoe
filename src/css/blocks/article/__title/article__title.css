@@ -1,9 +1,13 @@
 
 .article__title{
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: var(--fw-semi-bold);
 	display: inline-block;
 	margin-bottom: 10px;
 	text-decoration: underline;
 	line-height: 1.6;
+	&:hover{
+		color: var(--red_e30);
+	}
 }
 

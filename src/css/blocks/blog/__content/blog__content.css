@@ -3,7 +3,7 @@
 	& img{
 		border-radius: var(--img-border-rad);
 	}
-	& table{
+	& table:not([class^='table--']){
 		width: 100%;
 		line-height: 2.5;
 		margin-bottom: 2em;		
@@ -17,6 +17,7 @@
 			font-weight: var(--fw-semi-bold);
 			border-bottom: 2px solid;
 			border-color: var(--black);
+			word-break: normal;
 		}
 		& tr{
 			border-bottom: 1px solid;
@@ -28,6 +29,9 @@
 			padding-bottom: 2px;
 			&:last-child{
 				text-align: right;
+			}
+			&:not(:last-child){
+				padding-right: 10px;
 			}
 		}
 	}

@@ -19,6 +19,10 @@
 	& .article{
 		margin-bottom: 20px;
 	} 
+	& .article__title{
+		font-size: 14px;
+		font-weight: var(--fw-normal);
+	}	
 	& .swiper-pagination,
 	& .swiper-button-prev, 
 	& .swiper-button-next{

@@ -1,0 +1,155 @@
+include ./mixins.pug
+doctype html
+html(lang="ru")
+	include partials/head.pug
+	body.page
+		.page__body
+			+header()
+			main.main.page__main
+				.page__wrapper
+					.breadcrumbs
+						a.breadcrumbs__item(href="#")
+							| Каталог
+						a.breadcrumbs__item(href="#")
+							| Яйцо пищевое
+					h2.page__title
+						| Яйцо пищевое
+					.blog
+						.blog__content
+							.gallery.gallery--blog
+								.slider.slider--blog-gallery
+									.swiper-container
+										.swiper-wrapper
+											.swiper-slide 
+												img.img(src="../images/gallery-2-1.jpg", alt="gallery", data-bg="true")
+											.swiper-slide 
+												img.img(src="../images/gallery-2-2.jpg", alt="gallery", data-bg="true")
+											.swiper-slide 
+												img.img(src="../images/gallery-2-3.jpg", alt="gallery", data-bg="true")
+											.swiper-slide 
+												img.img(src="../images/gallery-2-4.jpg", alt="gallery", data-bg="true")
+											.swiper-slide 
+												img.img(src="../images/gallery-2-5.jpg", alt="gallery", data-bg="true")
+										.swiper-button-prev
+											svg.icon.icon--active.icon--arrow-left
+												use(xlink:href="../images/sprite.svg#arrow-left")
+										.swiper-button-next
+											svg.icon.icon--active.icon--arrow-right
+												use(xlink:href="../images/sprite.svg#arrow-right")
+							p
+								| В настоящее время предприятие радо предложить яйцо пищевое: яйцо отборное, первой и второй категории, мелкое, а также яйцо некондиционное для пром. переработки.
+							p
+								| Кроме того, учреждение яйцо производит яйцо, обогащённое витаминами и микроэлиментами под маркой «Деревенское», данное яйцо обладает более ярким желтком и улучшенными вкусовыми качествами.
+							p
+								| Яичная продукция упаковывается в прокладки по 30 шт., а также в контейнера по 10 шт. Благодаря специальной системе кормления в которой используются только натуральные ингредиенты, яйцо, производимое хозяйством обладает отменными вкусовыми качествами, кроме того предприятие может гарантировать поставку диетического яйца которое хранилось не более 7 дней после снесения.
+							h5
+								| Прайс-лист
+							table
+								caption
+									| Яйцо племенное
+								thead
+									tr
+										td(width="70%")
+											| Наименование продукции
+										td.text--right
+											| Оптовая
+										td
+											| Менее&nbsp;4&nbsp;кор.
+								tbody
+									tr
+										td
+											| Яйцо отборное 1 категории (0 1) более 69 грамм
+										td.text--right
+											b
+												| 5,50
+										td
+											b
+												| 5,70
+									tr
+										td
+											| Яйцо Деревенское 1 категории (Д0 1) более 69 грамм
+										td.text--right
+											b
+												| 6,30
+										td
+											b
+												| 7,00
+									tr
+										td
+											| Яйцо отборное 2 категории (0 2) от 64 до 68 грамм
+										td.text--right
+											b
+												| 5,00
+										td
+											b
+												| 5,50
+									tr
+										td
+											| Яйцо Деревенское 2 категории (Д0 2) от 64 до 68 грамм
+										td.text--right
+											b
+												| 5,90
+										td
+											b
+												| 6,10
+									tr
+										td
+											| Яйцо Детическое 1 категории (Д 1) от 55 до 64 грамм
+										td.text--right
+											b
+												| 4,00
+										td
+											b
+												| 4,30
+									tr
+										td
+											| Яйцо Деревенское диетическое 1 категории (ДД 1) от 55 до 64 грамм
+										td.text--right
+											b
+												| 5,30
+										td
+											b
+												| 5,80
+									tr
+										td
+											| Яйцо Диетическое 2 категории (Д 2) от 46 до 54 грамм
+										td.text--right
+											b
+												| 3,60
+										td
+											b
+												| 3,80
+									tr
+										td
+											| Яйцо Мелкое менее 46 грамм
+										td.text--right
+											b
+												| 3,10
+										td
+											b
+												| 3,30
+									tr
+										td
+											| Яйцо Некондикция
+										td.text--right
+											b
+												| 4,10
+										td
+											b
+												| 4,30
+									tr
+										td
+											| Меланж
+										td.text--right
+											b
+												| 30
+										td
+									tr
+										td
+											| Меланж замороженный
+										td.text--right
+											b
+												| 30
+										td
+						aside.blog__aside
+			include partials/footer.pug

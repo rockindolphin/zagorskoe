@@ -1,0 +1,60 @@
+include ./mixins.pug
+doctype html
+html(lang="ru")
+	include partials/head.pug
+	body.page
+		.page__body
+			+header()
+			main.main.page__main
+				.page__wrapper
+					.breadcrumbs
+						a.breadcrumbs__item(href="#")
+							| Новости
+					h2.page__title
+						| Новости
+					.blog
+						.blog__content
+							.news
+								.news__items
+									article.article
+										.article__pic
+											img.img(src="../images/article-1.jpg", alt="pic", data-bg="true")
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
+									article.article
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| Ввоз племенного молодняка прародительского стада кроссов «Хайсекс Браун» и «Декалб Уайт»
+									article.article
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| Ввоз племенного молодняка прародительского стада кроссов «Хайсекс Браун» и «Декалб Уайт»
+									article.article
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| От племенного репродуктора к Российскому селекционно-генетическому центру
+									article.article
+										.article__pic
+											img.img(src="../images/article-2.jpg", alt="pic", data-bg="true")
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| Празднование Дня работника сельского хозяйства и перерабатывающей промышленности
+									article.article
+										.article__pic
+											img.img(src="../images/article-3.jpg", alt="pic", data-bg="true")
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| На выставке «Золотая осень 2017» предприятие награждено золотой медалью с дипломом первой степени за успехи в области племенной деятельности.
+									article.article
+										.article__date
+											| 12 декабря, 2017
+										a.article__title( href="#")
+											| От племенного репродуктора к Российскому селекционно-генетическому центру
+			include partials/footer.pug

@@ -1,0 +1,19 @@
+include ./mixins.pug
+doctype html
+html(lang="ru")
+	include partials/head.pug
+	body.page
+		.page__body
+			+header()
+			main.main.page__main
+				.page__wrapper
+					.breadcrumbs
+						a.breadcrumbs__item(href="#")
+							| Контакты
+					h2.page__title
+						| Контактная информация
+					.blog
+						.blog__content
+							| lorem
+						aside.blog__aside
+			include partials/footer.pug

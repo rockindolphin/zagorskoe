@@ -1,5 +1,6 @@
 
 .blog__aside{
+	flex-shrink: 0;
 	@media (--medium-viewport){
 		
 	}
