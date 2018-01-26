@@ -1,0 +1,19 @@
+
+.slider--blog-gallery-thumbs{
+	& .swiper-slide{
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: var(--img-border-rad);
+		max-width: 90px;
+		&::before{
+			content: '';
+			display: inline-block;
+			padding-top: 55%;
+		}
+		&.swiper-slide-active{
+			box-shadow: inset 0 0 0 3px var(--red_e30);
+		}		
+	}
+}
+

@@ -1,7 +1,35 @@
 
 .blog__content{
-	& .img{
+	& img{
 		border-radius: var(--img-border-rad);
+	}
+	& table{
+		width: 100%;
+		line-height: 2.5;
+		margin-bottom: 2em;		
+		& caption{
+			text-align: left;
+			font-weight: var(--fw-bold);
+			font-size: 18px;
+		}
+		& thead{
+			font-size: 14px;
+			font-weight: var(--fw-semi-bold);
+			border-bottom: 2px solid;
+			border-color: var(--black);
+		}
+		& tr{
+			border-bottom: 1px solid;
+			border-color: color(#000000 alpha(15%));
+		}
+		& td{
+			vertical-align: top;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			&:last-child{
+				text-align: right;
+			}
+		}
 	}
 	@media (--medium-viewport){
 		

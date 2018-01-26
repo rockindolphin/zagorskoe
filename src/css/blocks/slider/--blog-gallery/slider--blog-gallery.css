@@ -1,0 +1,36 @@
+
+.slider--blog-gallery{
+	margin-bottom: 10px;
+	& .swiper-slide{
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: var(--img-border-rad);
+		& .img{
+			display: none;
+		}
+		&::before{
+			content: '';
+			display: inline-block;
+			padding-top: 55%;
+		}		
+	}
+	& .swiper-button-prev{
+		left: 10px;
+	}
+	& .swiper-button-next{
+		right: 10px;
+	}
+	& .swiper-button-prev,
+	& .swiper-button-next{
+		color: var(--white);
+		&:hover{
+			color: var(--red_e30);
+		}
+		& .icon{
+			width: 22px;
+			height: 40px;
+		}
+	}
+}
+

@@ -40,7 +40,6 @@
 	}
 	& .input__content{
 		width: 100%;
-		color: var(--gray_555);
 		display: none;
 		padding-left: var(--page-gap);
 		padding-right: var(--page-gap);
@@ -58,7 +57,6 @@
 		align-items: flex-start;
 		justify-content: center;
 		flex-wrap: wrap;
-		padding-top: 20px;
 		margin-left: 0;
 		margin-right: 0;
 		padding-left: 0;

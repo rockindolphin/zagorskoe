@@ -76,7 +76,44 @@
 					slidesPerView: 1,
 				},
 			}			
-		});		
+		});
+
+		var blogGallery = new Swiper('.gallery--blog .swiper-container', {
+			slidesPerView: 'auto',
+			thumbsSlider: null,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},						
+			on: {
+				init: function(){
+					var slides_html = '';
+					[].slice.call(this.slides).map(function(slide){
+						var src = $(slide).find('img').attr('src');
+						slides_html+= `<div class="swiper-slide" style="background-image:url(${src})"></div>`;
+					});
+					var thumbs_slider_html = 
+`<div class="slider slider--blog-gallery-thumbs">
+	<div class="swiper-container gallery-thumbs">
+	    <div class="swiper-wrapper">
+			${slides_html}
+		</div>
+	</div>
+</div>`;
+					var thumbsSliderNode = $(thumbs_slider_html);
+					var main = this;
+					$(this.el).parent().after( thumbsSliderNode );
+					this.params.thumbsSlider = new Swiper( $(thumbsSliderNode).find('.swiper-container').get(0),{
+						spaceBetween: 10,
+						slidesPerView: 'auto',
+						slideToClickedSlide: true,
+						centeredSlides: true
+					});
+					this.params.thumbsSlider.controller.control = this;
+					this.controller.control = this.params.thumbsSlider;						
+				} 
+			},			
+		});				
 
 
 	});	

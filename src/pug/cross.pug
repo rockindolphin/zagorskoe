@@ -1,0 +1,240 @@
+include ./mixins.pug
+doctype html
+html(lang="ru")
+	include partials/head.pug
+	body.page
+		.page__body
+			+header()
+			main.main.page__main
+				.page__wrapper
+					.breadcrumbs
+						a.breadcrumbs__item(href="#")
+							| Каталог
+						a.breadcrumbs__item(href="#")
+							| Племенная продукция
+					h2.page__title
+						| Кросс яичных кур «СП 789»
+					.blog
+						.blog__content
+							.input__wrapper--tabs
+								input.input(type="radio", name="tabs", id="tab-1" data-tab="1" checked)
+								label.input__label(for="tab-1")
+									span
+										| Описание
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down")
+								.input__content(data-tab="1")
+									.gallery.gallery--blog
+										.slider.slider--blog-gallery
+											.swiper-container
+												.swiper-wrapper
+													.swiper-slide 
+														img.img(src="../images/gallery-1-1.jpg", alt="gallery", data-bg="true")
+													.swiper-slide 
+														img.img(src="../images/gallery-1-2.jpg", alt="gallery", data-bg="true")
+													.swiper-slide 
+														img.img(src="../images/gallery-1-3.jpg", alt="gallery", data-bg="true")
+													.swiper-slide 
+														img.img(src="../images/gallery-1-4.jpg", alt="gallery", data-bg="true")
+													.swiper-slide 
+														img.img(src="../images/gallery-1-5.jpg", alt="gallery", data-bg="true")
+												.swiper-button-prev
+													svg.icon.icon--active.icon--arrow-left
+														use(xlink:href="../images/sprite.svg#arrow-left")
+												.swiper-button-next
+													svg.icon.icon--active.icon--arrow-right
+														use(xlink:href="../images/sprite.svg#arrow-right")
+									p
+										| Новый трехлинейный кросс белоскорлупных яичных кур «СП 789» создан в ОНО «Загорское ЭПХ ВНИТИП» ГНУ ВНИТИП Россельхозакадемии. Кросс аутосексный по скорости роста пера. В суточном возрасте: курочки быстрооперяющиеся; петушки медленнооперяющиеся. Точность сексирования цыплят 99,5-99,7 %.
+									p
+										| Отличительной особенностью отцовской линии СП 8 является наличие гена медленной «К» и сверхмедленной оперяемости «Кn», что обеспечивает 100 % его пенетрантность. Куры нового кросса отличаются высокой яйценоскостью, сохранностью поголовья и отличным качеством яиц. Яйценоскость гибридных кур составляет 328,4 яйца, массой яйца 66,1 г, яичная масса – 21,0 кг, сохранность поголовья - 97,2 %, конверсия корма – 2,03 кг, плотность яиц - 1,083 г/см3
+									p
+										| По сравнению с исходным материалом, в результате интенсивной селекции, яйценоскость кур нового кросса увеличилась на 4,9 яйца, сохранность поголовья на 2,6 %, конверсия корма улучшилась на 5,9 %. Воспроизводительные качества кур высокие: оплодотворенность яиц 97,4 %, вывод цыплят 85,6 %, количество молодок от одной несушки в 16 недельном возрасте 99,0 голов. СГЦ «Загорское ЭПХ ВНИТИП» радо предложить постаки инкубационного яйца и суточных цыплят родительских форм, а так же финального гибрида
+									h5
+										| Прайс-лист
+									table
+										caption
+											| Яйцо племенное
+										thead
+											tr
+												td
+													| Продукт
+												td
+													| Цена, руб
+										tbody
+											tr
+												td
+													| Яйцо инкубационное финального гибрида 
+												td
+													b
+														| 10 
+											tr
+												td
+													| Яйцо инкубационное родительских форм
+												td
+													b
+														| 25
+									table
+										caption
+											| Суточный молодняк
+										thead
+											tr
+												td
+													| Продукт
+												td
+													| Цена, руб
+										tbody
+											tr
+												td
+													| Суточные цыплята финального гибрида 
+												td
+													b
+														| 35
+											tr
+												td
+													| Суточные цыплята родительских форм
+												td
+													b
+														| 75
+								input.input(type="radio", name="tabs", id="tab-2" data-tab="2" )
+								label.input__label(for="tab-2")
+									span
+										| Эмбрионы
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down" )
+								.input__content(data-tab="2")
+									img.img(src="../images/blog-1.jpg", alt="pic")
+									p
+										| Экспериментальное хозяйство Всероссийского института птицеводства является надёжным поставщиком куриных эмбрионов многим биофабрикам странны. Мы рады осуществляем поставки от 100 до 100 000 шт. 5-10 дневных эмбрионов, отличающихся повышенным выходом амниотической жидкости.
+									h5
+										| Прайс-лист
+									table
+										caption
+											| Эмбрионы куриные
+										thead
+											tr
+												td
+													| Продукт
+												td
+													| Партия
+												td
+													| Цена, руб
+										tbody
+											tr
+												td
+													| Эмбрионы куриные возраст 5-11 сут. 
+												td
+													| До 360 шт.
+													br
+													| от 360 – 1000 шт.
+													br
+													| от 1000 – 20 000 шт.
+													br
+													| Свыше - 20 000 шт.
+												td
+													b
+														| 120
+													br
+													b
+														| 60
+													br
+													b
+														| 20
+													br
+													b
+														| 15
+									h5
+										| Наши контрагенты
+									p
+										| ВНИЗЖ
+										br
+										| АВИВАК
+										br
+										| Микроген
+										br
+										| Покровский завод биопрепаратов
+										br
+										| Щелковский институт биопрепаратов
+										br
+										| Институт вакцин и сывороток имени Мечникова
+										br
+										| Институт зоогигиены им Гамалеи   
+								input.input(type="radio", name="tabs", id="tab-3" data-tab="3" )
+								label.input__label(for="tab-3")
+									span
+										| Живая птица
+									svg.icon.icon--active.icon--chewron-down
+										use(xlink:href="../images/sprite.svg#chewron-down")
+								.input__content(data-tab="3")
+									p
+										| Учреждение предлагает оптом и в розницу в течении всего года взрослую птицу белоскорлупных яичных кроссов, а также подрощенную молодку в весенне-летний период.
+									p
+										| Возможна доставка птицы по Московской области и в регионы. Поставляемая птица сопровождается полным набором сопроводительных документов: накладные, счёт фактуры, ветеринарное и племенное свидетельство.
+									table
+										thead
+											tr
+												td
+													| Продукт
+												td
+													| Возраст
+												td
+													| Партия
+												td
+													| Цена, руб
+										tbody
+											tr
+												td
+													| Куры/петухи СП-789;
+													br
+													| Хайсекс-Белый
+												td
+													| 1 год
+												td
+													| До 100 гол
+													br
+													| От 100- 200 гол
+													br
+													| От 200 – 300 гол
+													br
+													| Свыше 300 гол
+												td
+													b
+														| 150
+													br
+													b
+														| 120
+													br
+													b
+														| 100
+													br
+													b
+														| 80
+											tr
+												td
+													| Молодка СП-789;
+													br
+													| Хайсекс-Белый
+												td
+													| 4 мес.
+												td
+													| До 100 гол
+													br
+													| От 100- 200 гол
+													br
+													| От 200 – 300 гол
+													br
+													| Свыше 300 гол
+												td
+													b
+														| 300
+													br
+													b
+														| 280
+													br
+													b
+														| 260
+													br
+													b
+														| 250
+						aside.blog__aside
+			include partials/footer.pug
