@@ -1,8 +1,24 @@
 
 .header__logo{
-
+	position: absolute; 
+	right: 0; 
+	top: 50%; 
+	transform: translateY(-50%); 
 	& .img{
-
+		display: block;
+		width: 114px;
 	}
+	@media (--medium-viewport){
+		right: 50%;
+		transform: translateX(50%) translateY(-50%); 
+		& .img{
+			width: 140px;
+		}			
+	}
+	@media (--large-viewport){
+		& .img{
+			width: 158px;
+		}					
+	}	
 }
 

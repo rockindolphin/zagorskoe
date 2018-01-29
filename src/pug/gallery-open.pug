@@ -1,14 +1,14 @@
 include ./mixins.pug
 doctype html
 html(lang="ru")
-	+head('Gallery-open')
+	+head('Фотогалерея')
 	body.page
 		.page__body
-			+header()
+			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
 					.breadcrumbs
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="gallery.html")
 							| Фотогалерея
 					.blog
 						.blog__content

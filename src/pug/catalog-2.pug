@@ -1,16 +1,16 @@
 include ./mixins.pug
 doctype html
 html(lang="ru")
-	+head('Catalog-2')
+	+head('Коллекционный стада')
 	body.page
 		.page__body
-			+header()
+			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
 					.breadcrumbs
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="catalog.html")
 							| Каталог
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="catalog-2.html")
 							| Коллекционный стада
 					h2.page__title
 						| Коллекционный стада
@@ -18,17 +18,17 @@ html(lang="ru")
 						.blog__content
 							.catalog
 								.catalog__items
-									a.catalog__item(href="#")
+									a.catalog__item(href="catalog-3.html")
 										span.item__pic
 											img.img(src="../images/catalog-2-1.jpg", alt="catalog item" data-bg="true")
 										span.item__title
 											| Куры
-									a.catalog__item(href="#")
+									a.catalog__item(href="catalog-3.html")
 										span.item__pic
 											img.img(src="../images/catalog-2-2.jpg", alt="catalog item" data-bg="true")
 										span.item__title
 											| Цесарки
-									a.catalog__item(href="#")
+									a.catalog__item(href="catalog-3.html")
 										span.item__pic
 											img.img(src="../images/catalog-2-3.jpg", alt="catalog item" data-bg="true")
 										span.item__title

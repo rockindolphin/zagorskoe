@@ -1,14 +1,14 @@
 include ./mixins.pug
 doctype html
 html(lang="ru")
-	+head('Gallery')
+	+head('Фотогалерея')
 	body.page
 		.page__body
-			+header()
+			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
 					.breadcrumbs
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="gallery.html")
 							| Фотогалерея
 					h2.page__title
 						| Фотогалерея
@@ -17,7 +17,7 @@ html(lang="ru")
 							.gallery--main
 								.gallery__items
 									.gallery__item
-										a.item__pic(href="#")
+										a.item__pic(href="gallery-open.html")
 											img.img(src="../images/gallery-3.jpg", alt="pic", data-bg="true")
 											.item__wrapper
 												.item__counter
@@ -25,12 +25,12 @@ html(lang="ru")
 														use(xlink:href="../images/sprite.svg#photo")
 													| 14
 										.item__content
-											a.item__title( href="#")
+											a.item__title( href="gallery-open.html")
 												| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
 											.item__date
 												| 12 декабря, 2017
 									.gallery__item
-										a.item__pic(href="#")
+										a.item__pic(href="gallery-open.html")
 											img.img(src="../images/gallery-4.jpg", alt="pic", data-bg="true")
 											.item__wrapper
 												.item__counter
@@ -38,12 +38,12 @@ html(lang="ru")
 														use(xlink:href="../images/sprite.svg#photo")
 													| 27
 										.item__content
-											a.item__title( href="#")
+											a.item__title( href="gallery-open.html")
 												| Полигон для проведения научно-исследовательских работ и апробации законченных разработок-способов содержания птицы
 											.item__date
 												| 12 декабря, 2017
 									.gallery__item
-										a.item__pic(href="#")
+										a.item__pic(href="gallery-open.html")
 											img.img(src="../images/gallery-5.jpg", alt="pic", data-bg="true")
 											.item__wrapper
 												.item__counter
@@ -51,7 +51,7 @@ html(lang="ru")
 														use(xlink:href="../images/sprite.svg#photo")
 													| 32
 										.item__content
-											a.item__title( href="#")
+											a.item__title( href="gallery-open.html")
 												| Полигон для проведения научно-исследовательских работ и апробации законченных разработок-способов содержания птицы
 											.item__date
 												| 12 декабря, 2017

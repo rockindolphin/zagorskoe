@@ -26,6 +26,32 @@
 			$(this).hide();
 		});
 
+		//header
+		var headerOpen = false;
+		$('#header-menu-toggle').prop('checked',false);
+		$('#header-menu-toggle').on('change', function(){
+			$('.header__nav').toggleClass('nav--open');
+			if( !headerOpen ){
+				$('.page__body').addClass('scroll--locked');
+			}else{
+				$('.page__body').removeClass('scroll--locked');
+			}
+			headerOpen = !headerOpen;
+		});
+
+		$('.header__nav .nav__item>.btn').on('click', function(){
+			$(this).closest('.list__item').toggleClass('item--expanded');
+		});
+
+		//disable outline on click
+		$("body").on("mousedown", "*", function(e) {
+			if (($(this).is(":focus") || $(this).is(e.target)) && $(this).css("outline-style") == "none") {
+				$(this).css("outline", "none").on("blur", function() {
+					$(this).off("blur").css("outline", "");
+				});
+			}		
+		});
+
 		//sliders
 		var frontSliderPics = new Swiper('.slider--front-pics .swiper-container', {
 			slidesPerView: 1,
@@ -66,7 +92,7 @@
 			},						
 			on: {
 				init: function(){
-					//console.log('ok');
+					
 				} 
 			},
 			breakpoints: {
@@ -79,6 +105,18 @@
 			}			
 		});
 
+		function getSliderHtml(slider, slides){
+			var html = 
+`<div class="slider slider--blog-gallery-${slider}">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			${slides}
+		</div>
+	</div>
+</div>`;
+			return html;
+		}
+
 		var blogGallery = new Swiper('.gallery--blog .swiper-container', {
 			slidesPerView: 'auto',
 			thumbsSlider: null,
@@ -88,21 +126,19 @@
 			},						
 			on: {
 				init: function(){
-					var slides_html = '';
+					var main = this;
+					var thumbs_html = '';
+					var caption_html = '';
 					[].slice.call(this.slides).map(function(slide){
 						var src = $(slide).find('img').attr('src');
-						slides_html+= `<div class="swiper-slide" style="background-image:url(${src})"></div>`;
+						var caption = $(slide).find('.slide__caption').get(0);
+						thumbs_html+= `<div class="swiper-slide" style="background-image:url(${src})"></div>`;
+						caption_html+= `<div class="swiper-slide">${ $(caption).html() || '' }</div>`;
+						$(caption).remove();
 					});
-					var thumbs_slider_html = 
-`<div class="slider slider--blog-gallery-thumbs">
-	<div class="swiper-container gallery-thumbs">
-	    <div class="swiper-wrapper">
-			${slides_html}
-		</div>
-	</div>
-</div>`;
-					var thumbsSliderNode = $(thumbs_slider_html);
-					var main = this;
+
+					//thumbs
+					var thumbsSliderNode = $(getSliderHtml('thumbs',thumbs_html));
 					$(this.el).parent().after( thumbsSliderNode );
 					this.params.thumbsSlider = new Swiper( $(thumbsSliderNode).find('.swiper-container').get(0),{
 						spaceBetween: 10,
@@ -114,24 +150,11 @@
 					this.controller.control = this.params.thumbsSlider;
 
 					//caption
-					slides_html = '';
-					[].slice.call(this.slides).map(function(slide){
-						var caption = $(slide).find('.slide__caption').get(0);
-						slides_html+= `<div class="swiper-slide">${ $(caption).html() || '' }</div>`;
-						$(caption).remove();
-					});
-					var caption_slider_html = 
-`<div class="slider slider--blog-gallery-caption">
-	<div class="swiper-container">
-	    <div class="swiper-wrapper">
-			${slides_html}
-		</div>
-	</div>
-</div>`;
-					var captionSliderNode = $(caption_slider_html);
+					var captionSliderNode = $(getSliderHtml('caption',caption_html));
 					$(thumbsSliderNode).after( captionSliderNode );
 					this.params.captionSlider = new Swiper( $(captionSliderNode).find('.swiper-container').get(0),{
 						slidesPerView: 'auto',
+						allowTouchMove: false,
 					});
 
 				}, 

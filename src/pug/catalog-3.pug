@@ -1,18 +1,18 @@
 include ./mixins.pug
 doctype html
 html(lang="ru")
-	+head('Catalog-3')
+	+head('Куры')
 	body.page
 		.page__body
-			+header()
+			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
 					.breadcrumbs
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="catalog.html")
 							| Каталог
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="catalog-2.html")
 							| Коллекционный стада
-						a.breadcrumbs__item(href="#")
+						a.breadcrumbs__item(href="catalog-3.html")
 							| Куры
 					h2.page__title
 						| Куры
@@ -20,27 +20,27 @@ html(lang="ru")
 						.blog__content
 							.catalog
 								.catalog__items
-									a.catalog__item(href="#")
+									a.catalog__item(href="chicken.html")
 										span.item__pic
 											img.img(src="../images/catalog-3-1.jpg", alt="catalog item" data-bg="true")
 										span.item__title
 											| Австралорп чёрный
-									a.catalog__item(href="#")
+									a.catalog__item(href="chicken.html")
 										span.item__pic
 											img.img(src="../images/catalog-3-2.jpg", alt="catalog item" data-bg="true")
 										span.item__title
 											| Австралорп чёрно-пёстрый
-									a.catalog__item(href="#")
+									a.catalog__item(href="chicken.html")
 										span.item__pic
 											img.img(src="../images/catalog-3-3.jpg", alt="catalog item" data-bg="true")
 										span.item__title
 											| Амрок
-									a.catalog__item(href="#")
+									a.catalog__item(href="chicken.html")
 										span.item__pic
 											img.img(src="../images/catalog-3-4.jpg", alt="catalog item" data-bg="true")
 										span.item__title
 											| Андалузкая голубая
-									a.catalog__item(href="#")
+									a.catalog__item(href="chicken.html")
 										span.item__pic
 											img.img(src="../images/catalog-3-5.jpg", alt="catalog item" data-bg="true")
 										span.item__title

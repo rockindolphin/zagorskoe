@@ -24,6 +24,7 @@
 	}
 	@media (--large-viewport){
 		margin-bottom: 25px;		
+		margin-top: -200px;
 	}
 }
 

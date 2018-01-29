@@ -1,11 +1,21 @@
 
 .header__content{
-	background-color: var(--white);
+	position: relative;
+
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
 	margin-left: calc(-1*var(--page-gap));
 	margin-right: calc(-1*var(--page-gap));
-	border-radius: var(--box-rad);
-	box-shadow: 0 8px 24px 0 color(#000000 alpha(35%));
-	position: relative;
 	max-width: initial;
+	@media (--medium-viewport){
+		height: 120px;				
+	}
+	@media (--large-viewport){
+		border-radius: var(--box-rad);
+		box-shadow: 0 8px 24px 0 color(#000000 alpha(35%));
+	}	
 }
 
