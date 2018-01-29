@@ -58,6 +58,7 @@
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
+				clickable: true,
 			},
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -130,7 +131,7 @@
 					var captionSliderNode = $(caption_slider_html);
 					$(thumbsSliderNode).after( captionSliderNode );
 					this.params.captionSlider = new Swiper( $(captionSliderNode).find('.swiper-container').get(0),{
-						slidesPerView: 1,
+						slidesPerView: 'auto',
 					});
 
 				}, 

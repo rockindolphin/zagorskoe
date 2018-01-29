@@ -2,6 +2,11 @@
 .page__title{
 	font-weight: var(--fw-normal);
 	margin-top: 0;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	@media (--medium-viewport){
+		margin-bottom: 30px;						
+	}
+	@media (--large-viewport){
+	}	
 }
 

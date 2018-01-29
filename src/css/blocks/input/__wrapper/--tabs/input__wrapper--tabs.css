@@ -28,8 +28,8 @@
 		justify-content: space-between;
 		padding-left: var(--page-gap);
 		padding-right: var(--page-gap);
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 6px;
+		padding-bottom: 6px;
 		min-height: 40px;
 		font-weight: var(--fw-semi-bold);
 		cursor: pointer;
@@ -37,6 +37,7 @@
 		border: 1px solid;
 		border-color: color(#000000 alpha(15%));
 		background-color: var(--white);
+		font-size: 16px;
 	}
 	& .input__content{
 		width: 100%;
@@ -45,7 +46,6 @@
 		padding-right: var(--page-gap);
 		padding-top: 20px;
 		padding-bottom: 20px;
-		font-size: 12px;
 		&>*:first-child{
 			margin-top: 0;
 		}
@@ -92,7 +92,6 @@
 			order: 2;
 			padding-left: 0;
 			padding-right: 0;
-			font-size: 14px;
 		}		
 	}	
 	@media (--large-viewport){

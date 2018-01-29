@@ -11,6 +11,7 @@
 	--img-border-rad:  4px;
 	--md-breakpoint:  639px;
 	--lg-breakpoint:  1069px;
+	--btn-min-side:  44px;
 
 	/*Colors*/
 	--black: #000000;
@@ -126,6 +127,7 @@ body{
 	padding: 0;
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
+	line-height: 1.4;
 	color: var(--gray_333);
 	font-weight: var(--fw-normal);
 }

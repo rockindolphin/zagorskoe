@@ -9,8 +9,7 @@
 	border-radius: var(--box-rad);
 	line-height: 1.6;
 	margin-bottom: 2em;
-	font-size: 12px;
-	min-width: 320px;		
+	font-size: 12px;		
 	& thead{
 		font-size: 14px;
 		font-weight: var(--fw-semi-bold);
@@ -29,8 +28,12 @@
 			text-align: right;
 		}
 	}
+	@media ( min-width: 360px ){
+		min-width: 320px;
+	}	
 	@media ( max-width: 639px ){
 		float: none;
+		width: 100%;
 		&.float--left{
 			margin-right: 0;		
 		}

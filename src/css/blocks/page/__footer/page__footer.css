@@ -25,7 +25,7 @@
 		max-width: var(--aside-max-width);
 	}
 	& .footer__about{
-		max-width: 300px;
+		max-width: 350px;
 		&>*:first-child{
 			margin-top: 0;
 		}
@@ -34,7 +34,8 @@
 		margin-bottom: 20px;
 	}
 	@media (--medium-viewport){
-		font-size: 12px;					
+		font-size: 12px;
+		line-height: 1.5;					
 		& .footer__about{
 			max-width: 480px;
 		}		

@@ -1,5 +1,10 @@
 
 .gallery__title{
-	max-width: 60%;
+	@media (--medium-viewport){
+		max-width: 80%;				
+	}
+	@media (--large-viewport){
+		max-width: 60%;						
+	}	
 }
 

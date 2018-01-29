@@ -1,5 +1,6 @@
 
 .article__date{
+	color: var(--gray_666);
 	font-size: 11px;
 }
 

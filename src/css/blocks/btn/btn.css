@@ -1,5 +1,20 @@
 
 .btn{
+	min-width: var(--btn-min-side);
+	min-height: var(--btn-min-side);
+	text-align: center;	
+	& .icon{
+		vertical-align: middle;
+	}
+}
 
+a.btn{
+	text-decoration: none;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding-top: 6px; 
+	padding-bottom: 6px; 
 }
 

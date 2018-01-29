@@ -12,6 +12,12 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		& .list{
+			display: none;
+		}
+		& .btn{
+			display: none;
+		}
 	}
 }
 
