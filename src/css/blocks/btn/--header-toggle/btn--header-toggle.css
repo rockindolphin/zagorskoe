@@ -1,0 +1,63 @@
+
+.btn--header-toggle{
+	display: block;
+	cursor: pointer;
+	position: relative;
+	align-self: center;
+	width: 44px;
+	height: 44px;
+	& span{
+		display: block;
+		position: absolute;
+		height: 4px;
+		width: 100%;
+		background: var(--black);
+		opacity: 1;
+		left: 0;
+		border-radius: 2px;
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+		transition: top .25s ease-in-out,
+					width .25s ease-in-out,
+					transform .25s ease-in-out;
+		will-change: top, width, transform;
+		outline: 1px solid transparent;/*firefox anialiasing hack*/
+		&:nth-child(1) {
+			top: 10px;
+		}
+		&:nth-child(2){
+			top: 20px;
+			left: 50%;
+			transform: translateX(-50%);			
+		}
+		&:nth-child(3) {
+			top: 30px;
+		}										
+	}
+	@media (--medium-viewport){
+				
+	}
+	@media (--large-viewport){
+		display: none;
+	}			
+}
+
+#header-menu-toggle{
+	display: none;
+	&:checked+.btn--header-toggle{
+		& span{
+			&:nth-child(1) {
+				top: 20px;
+				transform: rotate(45deg);
+			}
+			&:nth-child(2) {
+				width: 0%;				
+			}
+			&:nth-child(3) {
+				top: 20px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+

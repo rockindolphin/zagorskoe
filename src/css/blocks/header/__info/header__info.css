@@ -4,5 +4,26 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
+	& .info__item{
+		margin-bottom: 0;
+		flex-direction: row;
+		width: initial;
+		align-items: center;
+		justify-content: flex-start;
+		font-family: Roboto;
+		font-weight: var(--fw-bold);
+		font-size: 18px;
+		&:not(:last-child){
+			margin-right: 25px;
+		}
+		& .icon{
+			width: 24px;
+			height: 24px;
+			color: var(--gray_555);
+			& + *{
+				margin-left: 10px;
+			}			
+		} 
+	}
 }
 

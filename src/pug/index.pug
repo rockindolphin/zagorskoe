@@ -11,19 +11,25 @@ html(lang="ru")
 							img.img(src="../images/header-logo.png", alt="logo")
 						.header__top
 							.header__sitename
-								| Селекционно-генетический центр
+								span
+									| Селекционно-генетический центр
 								strong
 									| «Загорское ЭПХ»
 							.header__info
-								.info__phone
+								.info__item.info__phone
 									svg.icon.icon--active.icon--phone
 										use(xlink:href="../images/sprite.svg#phone")
 									a(href="tel:#")
 										| +7 496 546-19-20
-								a.info__email(href="mailto:#")
+								a.info__item.info__email(href="mailto:#")
 									svg.icon.icon--active.icon--email
 										use(xlink:href="../images/sprite.svg#email")
 						.header__bottom
+							input(type="checkbox", id="header-menu-toggle")
+							label.btn.btn--header-toggle(for="header-menu-toggle")
+								span
+								span
+								span
 							nav.header__nav
 								ul.list
 									li.list__item

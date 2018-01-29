@@ -1,5 +1,12 @@
 
 .header{
-
+	margin-top: 50px;
+	margin-bottom: -170px;
+	@media (--medium-viewport){
+					
+	}
+	@media (--large-viewport){
+		
+	}	
 }
 

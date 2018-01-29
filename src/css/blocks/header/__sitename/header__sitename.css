@@ -2,6 +2,11 @@
 .header__sitename{
 	font-family: Roboto, sans-serif;
 	font-size: 13px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	line-height: 1;
 	& strong{
 		display: block;
 		font-family: Montserrat, sans-serif;

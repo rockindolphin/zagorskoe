@@ -1,11 +1,20 @@
 
 .header__top{
+	background-color: var(--white);
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
 	justify-content: space-between;	
 	padding-left: var(--page-gap);
-	padding-right: var(--page-gap);		
+	padding-right: var(--page-gap);	
+	flex-grow: 1;
+	@media (--medium-viewport){
+					
+	}
+	@media (--large-viewport){
+		border-top-left-radius: var(--box-rad);	
+		border-top-right-radius: var(--box-rad);
+	}		
 }
 
