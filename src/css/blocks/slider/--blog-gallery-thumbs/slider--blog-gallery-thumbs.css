@@ -6,6 +6,7 @@
 		background-repeat: no-repeat;
 		border-radius: var(--img-border-rad);
 		max-width: 90px;
+		margin-bottom: 10px;
 		&::before{
 			content: '';
 			display: inline-block;

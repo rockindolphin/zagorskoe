@@ -1,0 +1,58 @@
+include ./mixins.pug
+doctype html
+html(lang="ru")
+	+head('Gallery')
+	body.page
+		.page__body
+			+header()
+			main.main.page__main
+				.page__wrapper
+					.breadcrumbs
+						a.breadcrumbs__item(href="#")
+							| Фотогалерея
+					h2.page__title
+						| Фотогалерея
+					.blog
+						.blog__content
+							.gallery--main
+								.gallery__items
+									.gallery__item
+										.item__pic
+											img.img(src="../images/gallery-3.jpg", alt="pic", data-bg="true")
+											.item__wrapper
+												.item__counter
+													svg.icon.icon--active.icon--photo
+														use(xlink:href="../images/sprite.svg#photo")
+													| 14
+										.item__content
+											a.item__title( href="#")
+												| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
+											.item__date
+												| 12 декабря, 2017
+									.gallery__item
+										.item__pic
+											img.img(src="../images/gallery-4.jpg", alt="pic", data-bg="true")
+											.item__wrapper
+												.item__counter
+													svg.icon.icon--active.icon--photo
+														use(xlink:href="../images/sprite.svg#photo")
+													| 27
+										.item__content
+											a.item__title( href="#")
+												| Полигон для проведения научно-исследовательских работ и апробации законченных разработок-способов содержания птицы
+											.item__date
+												| 12 декабря, 2017
+									.gallery__item
+										.item__pic
+											img.img(src="../images/gallery-5.jpg", alt="pic", data-bg="true")
+											.item__wrapper
+												.item__counter
+													svg.icon.icon--active.icon--photo
+														use(xlink:href="../images/sprite.svg#photo")
+													| 32
+										.item__content
+											a.item__title( href="#")
+												| Полигон для проведения научно-исследовательских работ и апробации законченных разработок-способов содержания птицы
+											.item__date
+												| 12 декабря, 2017
+			include partials/footer.pug

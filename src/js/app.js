@@ -110,9 +110,34 @@
 						centeredSlides: true
 					});
 					this.params.thumbsSlider.controller.control = this;
-					this.controller.control = this.params.thumbsSlider;						
-				} 
-			},			
+					this.controller.control = this.params.thumbsSlider;
+
+					//caption
+					slides_html = '';
+					[].slice.call(this.slides).map(function(slide){
+						var caption = $(slide).find('.slide__caption').get(0);
+						slides_html+= `<div class="swiper-slide">${ $(caption).html() || '' }</div>`;
+						$(caption).remove();
+					});
+					var caption_slider_html = 
+`<div class="slider slider--blog-gallery-caption">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+			${slides_html}
+		</div>
+	</div>
+</div>`;
+					var captionSliderNode = $(caption_slider_html);
+					$(thumbsSliderNode).after( captionSliderNode );
+					this.params.captionSlider = new Swiper( $(captionSliderNode).find('.swiper-container').get(0),{
+						slidesPerView: 1,
+					});
+
+				}, 
+				slideChange: function(){
+					this.params.captionSlider.slideTo(this.activeIndex);
+				}			
+			},
 		});				
 
 
