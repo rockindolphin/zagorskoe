@@ -28,3 +28,8 @@
 	}
 }
 
+@-moz-document url-prefix() {
+	.slider--front > .page__wrapper{
+		display: flex;
+	}
+}

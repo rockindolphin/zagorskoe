@@ -1,6 +1,13 @@
 (function($){
 	$(document).ready(function() {
 
+		//внешние svg в ie11
+		try{
+			svg4everybody();
+		}catch(error){
+			console.log(error);
+		}
+
 		//ширина скроллбара
 		var scrollMeasure = $('<div>').addClass('scroll__measure').get(0);
 		$('body').append(scrollMeasure);
@@ -50,6 +57,18 @@
 					$(this).off("blur").css("outline", "");
 				});
 			}		
+		});
+
+		//input--tabs
+		$('.input__wrapper--tabs .input__label').click(function(){
+			if( window.innerWidth < 640 ){
+				setTimeout(function(args) {
+					var scrollTo = $(this).offset().top;
+					$('html, body').animate({
+						scrollTop: scrollTo
+					}, 800);
+				}.bind(this), 100);
+			}
 		});
 
 		//sliders

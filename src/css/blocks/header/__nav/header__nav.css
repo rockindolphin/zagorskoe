@@ -97,6 +97,7 @@
 	}
 	@media (--large-viewport){
 		position: relative;
+		top: 0;
 		background: transparent;
 		font-size: 13px;
 		color: var(--white);

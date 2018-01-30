@@ -65,3 +65,12 @@
 		}										
 	}	
 }
+
+@-moz-document url-prefix() {
+	.slider--front-text{
+		display: block;
+	}
+	.slider--front-text .swiper-container{
+		height: 100%;
+	}		
+}

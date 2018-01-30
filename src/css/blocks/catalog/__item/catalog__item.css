@@ -53,3 +53,9 @@
 	}
 }
 
+
+@-moz-document url-prefix() {
+	.catalog__item .item__pic{
+		display: block;
+	}		
+}
