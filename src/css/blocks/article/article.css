@@ -1,5 +1,6 @@
 
 .article{
+	display: inline-block;
 	break-inside: avoid-column;
 	margin-bottom: 40px;
 }

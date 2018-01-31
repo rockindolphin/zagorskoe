@@ -10,16 +10,14 @@
 	background: var(--white);
 	font-weight: var(--fw-semi-bold);
 	font-size: 16px;
-	overflow: hidden; 
-	&.nav--open{
-		display: block;
-	}
+	overflow: hidden;
 	& .nav__wrapper{
 		max-width: initial;
 		height: calc(100vh - 100px);		
 		overflow-x: hidden;		
 		overflow-y: scroll;
 		margin-right: calc(-1*var(--scrollbar-width));
+		padding-bottom: 200px; 
 	}		
 	& .list{
 		padding-left: 0;
@@ -105,9 +103,6 @@
 		display: flex;
 		flex-direction: row;
 		align-items: stretch;
-		&.nav--open{
-			display: flex;
-		}		
 		& .nav__wrapper{
 			width: 100%;
 			max-width: 100%;
@@ -119,6 +114,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			padding-bottom: 0;		
 		}
 		& .list{
 			flex-direction: row;

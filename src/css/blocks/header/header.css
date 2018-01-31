@@ -1,10 +1,5 @@
 
 .header{
-	@media (--medium-viewport){
-					
-	}
-	@media (--large-viewport){
-		margin-top: 50px;
-	}	
+	
 }
 

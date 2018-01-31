@@ -1,5 +1,10 @@
 
 .footer__copy{
-
+	@media (--medium-viewport){
+		margin-top: 20px;
+	}
+	@media (--large-viewport){
+		
+	}
 }
 

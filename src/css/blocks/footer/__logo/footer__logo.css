@@ -1,5 +1,13 @@
 
 .footer__logo{
-
+	margin-bottom: 20px;
+	@media (--medium-viewport){
+		
+	}
+	@media (--large-viewport){
+		margin-bottom: 0px;
+		margin-right: 30px;
+		margin-top: -10px;		
+	}
 }
 

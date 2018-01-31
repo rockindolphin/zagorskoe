@@ -1,4 +1,4 @@
-- function pDate() {return new Date().getTime();}
+- function pDate() {return Math.trunc(new Date().getTime()/10000);}
 head
 	title Zagorskoe
 	link(rel="stylesheet", href="../css/style.css?ver=" + pDate())

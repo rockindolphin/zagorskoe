@@ -4,11 +4,28 @@
 	z-index: 5;
 	width: 100%;
 	background-color: transparent;
+	&.nav--open{
+		& .header__nav{
+			display: block;
+		}
+		& .header__logo{
+			right: 60px;
+		}
+	}	
 	@media (--medium-viewport){
-							
+		&.nav--open{
+			& .header__logo{
+				right: 50%;
+			}
+		}							
 	}
 	@media (--large-viewport){
-						
+		margin-top: 50px;
+		&.nav--open{
+			& .header__nav{
+				display: flex;
+			}
+		}						
 	}
 }
 

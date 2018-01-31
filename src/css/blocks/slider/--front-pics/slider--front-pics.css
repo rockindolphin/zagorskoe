@@ -34,4 +34,16 @@
 	}			
 }
 
+/*safari fix*/
+.slider--front-pics .swiper-container:not(:root:root) {
+	display: flex;
+	align-items: stretch;
+}
 
+.slider--front-pics .swiper-wrapper:not(:root:root) {
+	height: auto;
+}
+
+.slider--front-pics .swiper-slide:not(:root:root) {
+	height: auto;
+}

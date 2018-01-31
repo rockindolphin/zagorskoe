@@ -1,0 +1,16 @@
+
+.footer__content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;	
+	@media (--medium-viewport){
+		
+	}
+	@media (--large-viewport){
+		flex-direction: row;
+		align-items: flex-start;		
+	}
+}
+

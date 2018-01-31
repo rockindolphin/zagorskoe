@@ -1,5 +1,10 @@
 
 .footer__info{
-
+	@media (--medium-viewport){
+		
+	}
+	@media (--large-viewport){
+		
+	}
 }
 

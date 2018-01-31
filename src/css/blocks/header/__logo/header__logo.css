@@ -3,7 +3,8 @@
 	position: absolute; 
 	right: 0; 
 	top: 50%; 
-	transform: translateY(-50%); 
+	transform: translateY(-50%);
+	transition: right var(--anim-dur); 
 	& .img{
 		display: block;
 		width: 114px;

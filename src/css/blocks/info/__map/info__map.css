@@ -2,11 +2,25 @@
 .info__map{
 	width: 100%;
 	margin-bottom: 30px;
+	background-image: url('../images/map.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	&::before{
+		content: '';
+		display: inline-block;
+		padding-top: 360px;
+	}
 	& > * {
+		position: absolute;
+		left: 0;
+		top: 0;
 		width: 100% !important;
+		height: 100% !important;
 	}
 	@media (--medium-viewport){
-								
+		background-size: contain;						
 	}
 	@media (--large-viewport){
 	}	

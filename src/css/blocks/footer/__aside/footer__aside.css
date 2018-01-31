@@ -1,0 +1,13 @@
+
+.footer__aside{
+	display: none;
+	width: 100%;
+	max-width: var(--aside-max-width);	
+	@media (--medium-viewport){
+		
+	}
+	@media (--large-viewport){
+		display: block;
+	}
+}
+

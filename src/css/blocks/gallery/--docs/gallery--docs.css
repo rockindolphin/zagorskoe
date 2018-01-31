@@ -1,23 +1,15 @@
 
 .gallery--docs{
 	width: 100%;
-	display: inline-flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
 	& .gallery__items{
-		display: flex;
-		flex-direction: row;
-		align-items: stretch;
-		justify-content: flex-start;
-		flex-wrap: wrap;
+		width: 100%;
 	}
 	& .gallery__item{
-		max-width: calc( (var(--wrapper-max) - var(--blog-gap) - var(--aside-max-width))/3 -30px );
+		max-width: calc( (var(--wrapper-max) - var(--blog-gap) - var(--aside-max-width))/3 -35px );
 		margin-right: 30px;
 		margin-bottom: 15px;
-		align-items: center;
-		justify-content: center;
+		display: inline-block;
+		vertical-align: top;
 		&:hover{
 			& .item__pic{
 				box-shadow: none;
@@ -33,4 +25,5 @@
 		}		
 	}
 }
+
 

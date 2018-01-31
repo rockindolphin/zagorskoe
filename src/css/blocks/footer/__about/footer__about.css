@@ -1,5 +1,15 @@
 
 .footer__about{
+	width: 100%;
+	max-width: 350px;
+	&>*:first-child{
+		margin-top: 0;
+	}	
+	@media (--medium-viewport){
+		max-width: 480px;
+	}
+	@media (--large-viewport){
 
+	}
 }
 

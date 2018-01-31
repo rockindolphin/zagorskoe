@@ -1,3 +1,4 @@
+- function pDate() {return Math.trunc(new Date().getTime()/10000);}
 footer.footer.page__footer
 	.wrapper.page__wrapper
 		.footer__content
@@ -23,4 +24,4 @@ script(src="../js/vendors/jquery-3.2.1.min.js")
 script(src="../js/vendors/swiper.min.js")
 script(src="../js/vendors/svg4everybody.min.js")
 script(src="../js/vendors/lightbox.min.js")
-script(src="../js/app.js")
+script(src="../js/app.js?ver=" + pDate())

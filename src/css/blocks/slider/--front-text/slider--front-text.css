@@ -10,7 +10,7 @@
 	&::before{
 		content: '';
 		display: inline-block;
-		padding-top: 60%;
+		padding-top: 50%;
 		width: 0;
 		float: left;
 	}
@@ -47,6 +47,9 @@
 	}
 	@media (--large-viewport){
 		line-height: 1.2;
+		&::before{
+			padding-top: 60%;
+		}		
 		& :--all-headers{
 			font-size: 30px;
 		}
@@ -73,4 +76,19 @@
 	.slider--front-text .swiper-container{
 		height: 100%;
 	}		
+}
+
+
+/*safari fix*/
+.slider--front-text .swiper-container:not(:root:root) {
+	display: flex;
+	align-items: stretch;
+}
+
+.slider--front-text .swiper-wrapper:not(:root:root) {
+	height: auto;
+}
+
+.slider--front-text .swiper-slide:not(:root:root) {
+	height: auto;
 }
