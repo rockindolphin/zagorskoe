@@ -1,9 +1,6 @@
 
 .header__bottom{
-	/*background: var(--brown_a65) url('../images/header_bottom_pattern.jpg'); - мигает при клике (chrome 63)  */
-	background: #a65c45 url('../images/header_bottom_pattern.jpg');
-	background-position: left top;
-	background-repeat: repeat;
+	background: var(--brown_ae9);
 	padding-left: var(--page-gap);
 	padding-right: var(--page-gap);
 	display: flex;
@@ -16,22 +13,7 @@
 	z-index: 1;
 	& > *{
 		position: relative;
-		z-index: 3;
-	}
-	&::after{
-		content: '';
-		display: block;
-		position: absolute;
 		z-index: 2;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: var(--grad-header-bottom);
-		background-position: 0 0, 0 3px, 0 calc(100% - 3px);
-		background-repeat: repeat-x;
-		background-size: 100% 100%, 100% 1px, 100% 1px;
-		box-shadow: 0 8px 24px color(#280020 alpha(15%));
 	}
 	@media (--medium-viewport){
 					

@@ -73,14 +73,14 @@ function pugToHtml(filepath){
 		}
 	);
 }
-
+/*
 function fonts(filepath){
 	var fontFolder = path.normalize(filepath).split(path.sep).slice(-2,-1)[0];
 	if( fontFolder == '**' ){ fontFolder = ''}
 	gulp.src( filepath )
 	.pipe( gulp.dest( path.resolve(dist, 'fonts', fontFolder ) ) )
 }
-
+*/
 function WebP(filepath, size, quality){
 	gulp.src( filepath )
 	.pipe(
@@ -252,11 +252,11 @@ gulp.task('css', function(){
 		}	
 	);			
 });
-
+/*
 gulp.task('fonts', function(){
 	fonts( path.resolve(src, 'fonts', '**', '*') );
 });
-
+*/
 gulp.task('js', () => {
 		miss.pipe(
 			gulp.src( [path.resolve(src, 'js', '*.js'), '!src/js/vendors{,/**}'] ),
@@ -317,12 +317,12 @@ gulp.task('default', ['clear_dist', 'server'], () => {
 	let css_watcher = chokidar.watch( path.resolve(src, 'css', '**', '*.css'), {ignoreInitial: true} );
 	css_watcher.on('change', () => { gulp.start('css') });	
 	css_watcher.on('add', () => { gulp.start('css') });	
-
+	/*
 	gulp.start('fonts');
 	let fonts_watcher = chokidar.watch( path.resolve(src, 'fonts', '**', '*'), {ignoreInitial: true} ); 
 	fonts_watcher.on('change', (filepath) => { fonts(filepath) });	
 	fonts_watcher.on('add', (filepath) => { fonts(filepath) });	
-
+	*/
 	gulp.start('js');
 	let js_watcher = chokidar.watch( path.resolve(src, 'js', '**', '*.js'), {ignored: /vendors/, ignoreInitial: true} ); 
 	js_watcher.on('change', () => { gulp.start('js') });	
@@ -356,7 +356,7 @@ gulp.task('create_files', function(){
 	mkdirp('src/images/sprites', (err)=>{});	
 	mkdirp('src/images/sprites/png', (err)=>{});	
 	mkdirp('src/images/sprites/svg', (err)=>{});	
-	mkdirp('src/fonts', (err)=>{});	
+	//mkdirp('src/fonts', (err)=>{});	
 	mkdirp('src/pug', (err)=>{});	
 	mkdirp('src/js', (err)=>{});	
 	mkdirp('src/css', (err)=>{});	
