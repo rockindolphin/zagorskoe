@@ -1,8 +1,5 @@
 
 .slider--articles{
-	background-color: var(--white);
-	border-radius: 4px;
-	padding: 28px 40px;
 	& .slider__title{
 		font-size: 16px;
 		margin-top: 0;

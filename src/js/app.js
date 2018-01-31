@@ -46,7 +46,7 @@
 			headerOpen = !headerOpen;
 		});
 
-		$('.header__nav .nav__item>.btn').on('click', function(){
+		$('.header__nav .nav__item>.btn, .aside__nav .nav__item>.btn').on('click', function(){
 			$(this).closest('.list__item').toggleClass('item--expanded');
 		});
 
