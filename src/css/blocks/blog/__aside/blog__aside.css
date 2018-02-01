@@ -2,14 +2,28 @@
 .blog__aside{
 	background-color: var(--white);
 	border-radius: 4px;
-	padding: 28px 40px;	
 	flex-shrink: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	& > *{
+		&:first-child{
+			margin-top: 35px;
+			&.aside__nav{
+				margin-top: 22px;
+			}
+		}		
+		&:last-child{
+			margin-bottom: 35px;
+		}		
+	}
 	@media (--medium-viewport){
 		
 	}
 	@media (--large-viewport){
 		flex-grow: 1;
-		width: 100%;
 		max-width: var(--aside-max-width);
 	}
 }

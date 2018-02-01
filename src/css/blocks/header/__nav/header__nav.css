@@ -7,11 +7,11 @@
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background: var(--white);
 	font-weight: var(--fw-semi-bold);
 	font-size: 16px;
 	overflow: hidden;
 	& .nav__wrapper{
+		background: var(--white);
 		max-width: initial;
 		height: calc(100vh - 100px);		
 		overflow-x: hidden;		
@@ -96,7 +96,6 @@
 	@media (--large-viewport){
 		position: relative;
 		top: 0;
-		background: transparent;
 		font-size: 13px;
 		color: var(--white);
 		text-transform: uppercase;
@@ -114,7 +113,8 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding-bottom: 0;		
+			padding-bottom: 0;
+			background: transparent;		
 		}
 		& .list{
 			flex-direction: row;
