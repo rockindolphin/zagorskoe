@@ -7,9 +7,10 @@ html(lang="ru")
 			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
-					.breadcrumbs
-						a.breadcrumbs__item(href="news.html")
-							| Новости
+					ul.list.breadcrumbs
+						li.list__item.breadcrumbs__item
+							a.link(href="news.html")
+								| Новости
 					h2.page__title
 						| Характеристика орловской породы кур ситцевой разновидности по полиморфизму локусов
 					.blog

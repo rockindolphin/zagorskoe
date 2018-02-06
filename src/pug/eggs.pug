@@ -7,11 +7,13 @@ html(lang="ru")
 			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
-					.breadcrumbs
-						a.breadcrumbs__item(href="catalog.html")
-							| Каталог
-						a.breadcrumbs__item(href="eggs.html")
-							| Яйцо пищевое
+					ul.list.breadcrumbs
+						li.list__item.breadcrumbs__item
+							a.link(href="catalog.html")
+								| Каталог
+						li.list__item.breadcrumbs__item
+							a.link(href="eggs.html")
+								| Яйцо пищевое
 					h2.page__title
 						| Яйцо пищевое
 					.blog

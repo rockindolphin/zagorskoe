@@ -7,9 +7,10 @@ html(lang="ru")
 			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
-					.breadcrumbs
-						a.breadcrumbs__item(href="gallery.html")
-							| Фотогалерея
+					ul.list.breadcrumbs
+						li.list__item.breadcrumbs__item
+							a.link(href="gallery.html")
+								| Фотогалерея
 					.blog
 						.blog__content
 							.gallery.gallery--blog

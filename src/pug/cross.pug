@@ -7,11 +7,13 @@ html(lang="ru")
 			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
-					.breadcrumbs
-						a.breadcrumbs__item(href="catalog.html")
-							| Каталог
-						a.breadcrumbs__item(href="catalog-4.html")
-							| Племенная продукция
+					ul.list.breadcrumbs
+						li.list__item.breadcrumbs__item
+							a.link(href="catalog.html")
+								| Каталог
+						li.list__item.breadcrumbs__item
+							a.link(href="catalog-4.html")
+								| Племенная продукция
 					h2.page__title
 						| Кросс яичных кур «СП 789»
 					.blog

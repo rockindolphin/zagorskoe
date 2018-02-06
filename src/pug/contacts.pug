@@ -7,9 +7,10 @@ html(lang="ru")
 			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
-					.breadcrumbs
-						a.breadcrumbs__item(href="contacts.html")
-							| Контакты
+					ul.list.breadcrumbs
+						li.list__item.breadcrumbs__item
+							a.link(href="contacts.html")
+								| Контакты
 					h2.page__title
 						| Контактная информация
 					.blog

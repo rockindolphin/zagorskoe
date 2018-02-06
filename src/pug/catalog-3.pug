@@ -7,13 +7,16 @@ html(lang="ru")
 			include partials/header.pug
 			main.main.page__main
 				.page__wrapper
-					.breadcrumbs
-						a.breadcrumbs__item(href="catalog.html")
-							| Каталог
-						a.breadcrumbs__item(href="catalog-2.html")
-							| Коллекционный стада
-						a.breadcrumbs__item(href="catalog-3.html")
-							| Куры
+					ul.list.breadcrumbs
+						li.list__item.breadcrumbs__item
+							a.link(href="catalog.html")
+								| Каталог
+						li.list__item.breadcrumbs__item
+							a.link(href="catalog-2.html")
+								| Коллекционный стада
+						li.list__item.breadcrumbs__item
+							a.link(href="catalog-3.html")
+								| Куры
 					h2.page__title
 						| Куры
 					.blog
